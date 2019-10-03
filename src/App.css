@@ -20,3 +20,32 @@
 .App-link {
   color: #09d3ac;
 }
+.star-ratings-sprite {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  font-size: 0;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 110px;
+}
+.star-ratings-sprite-rating {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  background-position: 0 100%;
+  float: left;
+  height: 21px;
+}
+
+div.register-box h1,
+div.register-box h2,
+div.register-box h3,
+div.register-box h4,
+div.register-box h5
+{
+   color: white;
+}
+div.register-box p,
+div.register-box span{
+  color: white;
+  font-weight: lighter;
+}
