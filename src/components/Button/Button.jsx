@@ -1,17 +1,20 @@
 import React from 'react'
-const styles = {
-    border: 'none',
-    color: 'black',
-    backgroundColor: '#e7e7e7',
-    padding: '15px 32px',
-    textAlign: 'center',
-    textDecoration: 'none',
-    display: 'inline-block',
-    fontSize: '16px',
-    margin: '4px 2px',
-    cursor: 'pointer',
-}
+
 function Button(props) {
+
+    const styles = {
+        border: 'none',
+        color: props.styles.color,
+        backgroundColor: props.styles.backgroundColor,
+        padding: '15px 32px',
+        textAlign: 'center',
+        textDecoration: 'none',
+        display: props.styles.display,
+        fontSize: '16px',
+        margin: props.styles.margin,
+        cursor: 'pointer',
+        width: props.styles.width
+    }
     return (
         <button style={styles}>{props.children}</button>
     )
