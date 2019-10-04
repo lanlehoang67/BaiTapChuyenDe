@@ -14,25 +14,26 @@ const styles = {
     height: "300px"
   },
   detail: {
-    display: "block",
+    display: "inline-block",
     color: "#4FB0FF",
     fontWeight: "bold",
     lineHeight: "30px",
     margin: "20px 0 15px 0"
   },
   postBy: {
+    display: "block",
     float: "left",
     lineHeight: "36px",
     margin: "0 0 15px 0"
   },
   content: {
-    display: "block",
+    display: "inline-block",
     fontWeight: "bold",
     lineHeight: "30px",
     margin: "0 0 15px 0"
   },
   button: {
-    display: "inline-block",
+    display: "block",
     color: "black",
     backgroundColor: "#e7e7e7",
     margin: "4px 2px",
@@ -45,7 +46,7 @@ const styles = {
   },
   rightSide: {
     position: 'relative',
-    width: '700px'
+    width: '800px'
   }
 };
 function Post(props) {
