@@ -13,7 +13,9 @@ function Button(props) {
         fontSize: '16px',
         margin: props.styles.margin,
         cursor: 'pointer',
-        width: props.styles.width
+        width: props.styles.width,
+        position: props.styles.position,
+        bottom: props.styles.bottom
     }
     return (
         <button style={styles}>{props.children}</button>

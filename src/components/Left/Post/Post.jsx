@@ -2,15 +2,14 @@ import React from "react";
 import Button from "../../Button/Button";
 const styles = {
   coverImg: {
-    width: "450px",
+    margin: "auto 0 auto 30px",
+    paddingRight: "30px",
+    width: "650px",
     height: "250px",
-    margin: "auto",
-    marginLeft: "30px",
-    marginRight: "20px"
   },
   post: {
     display: "flex",
-    margin: "0 0 10px",
+    margin: "0 0 5px",
     backgroundColor: "white",
     height: "300px"
   },
@@ -23,7 +22,7 @@ const styles = {
   },
   postBy: {
     float: "left",
-    lineHeight: "30px",
+    lineHeight: "36px",
     margin: "0 0 15px 0"
   },
   content: {
@@ -36,7 +35,17 @@ const styles = {
     display: "inline-block",
     color: "black",
     backgroundColor: "#e7e7e7",
-    margin: "4px 2px"
+    margin: "4px 2px",
+    position: "absolute",
+    bottom: '21px'
+  },
+  rating: {
+    display: 'inline-block',
+    color: 'grey'
+  },
+  rightSide: {
+    position: 'relative',
+    width: '700px'
   }
 };
 function Post(props) {
@@ -44,15 +53,15 @@ function Post(props) {
   return (
     <div style={styles.post}>
       <img src={post.src} style={styles.coverImg} alt="" />
-      <div>
+      <div style={styles.rightSide}>
         <span style={styles.detail}>{post.title.toUpperCase()}</span>
-        <span>
+        <span style={styles.postBy}>
           Posted by {post.author} | {post.time} |{" "}
           {post.genres.map((genre, index) => {
             return index === 0 ? genre : ", " + genre;
           })}{" "}
           |{" "}
-          <div className="star-ratings-sprite">
+          <div className="star-ratings-sprite" style={styles.rating}>
             <span
               style={{ width: ((post.rate / 5) * 100).toString() + "%" }}
               className="star-ratings-sprite-rating"
